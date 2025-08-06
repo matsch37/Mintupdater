@@ -16,7 +16,7 @@ EOF
 
 # Konfiguration für systemd-logind
 CONF_FILE="/etc/systemd/logind.conf"
-SETTING="InhibitDelayMaxSec=600"
+SETTING="InhibitDelayMaxSec=36000"
 
 # Nur ändern, wenn nicht gesetzt oder anderer Wert aktiv ist
 if grep -q "^InhibitDelayMaxSec=" "$CONF_FILE"; then
