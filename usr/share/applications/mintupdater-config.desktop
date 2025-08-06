@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=Mint Updater Config
+Comment=Configure update checker
+Exec=/opt/mintupdater/update_gui.py
+Icon=system-software-update
+Terminal=false
+Type=Application
+Categories=System;Settings;

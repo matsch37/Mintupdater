@@ -1,0 +1,8 @@
+Package: mintupdater
+Version: 1.0
+Section: base
+Priority: optional
+Architecture: all
+Depends: python3, python3-gi, apt, pkexec
+Maintainer: 
+Description: User-level Mint update checker with background service and GUI

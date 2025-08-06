@@ -1,0 +1,31 @@
+#!/bin/bash
+set -e
+
+#PolicyKit für shutdown-block
+mkdir -p "/etc/polkit-1/rules.d"
+cat <<EOF > "/etc/polkit-1/rules.d/50-mintupdater-inhibit.rules"
+polkit.addRule(function(action, subject) {
+    if (action.id == "org.freedesktop.login1.inhibit-block-shutdown") {
+	    if (subject.process.executable == "/opt/mintupdater/update_checker.py") {
+       		return polkit.Result.YES;
+	}
+    }
+});
+EOF
+
+
+# Konfiguration für systemd-logind
+CONF_FILE="/etc/systemd/logind.conf"
+SETTING="InhibitDelayMaxSec=600"
+
+# Nur ändern, wenn nicht gesetzt oder anderer Wert aktiv ist
+if grep -q "^InhibitDelayMaxSec=" "$CONF_FILE"; then
+    sed -i "s/^InhibitDelayMaxSec=.*/$SETTING/" "$CONF_FILE"
+else
+    echo "$SETTING" >> "$CONF_FILE"
+fi
+
+# Logind neu starten, damit Änderung greift
+systemctl restart systemd-logind.service || true
+
+exit 0

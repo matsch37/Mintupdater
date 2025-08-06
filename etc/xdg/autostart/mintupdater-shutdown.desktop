@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Exec=/opt/mintupdater/update_checker.py
+Hidden=false
+NoDisplay=false
+X-GNOME-Autostart-enabled=true
+Name=MintUpdater Shutdown Service
+Comment=Runs update checker with shutdown handler
