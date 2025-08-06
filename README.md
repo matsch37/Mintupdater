@@ -2,9 +2,9 @@ Linux Mint Update Helper Program
 
 This program is a lightweight update helper for Linux Mint. I created it because I wasn’t satisfied with the two options available for updating Linux Mint:
 
-    Manual updates, which can be burdensome, especially for less experienced users.
+   Manual updates, which can be burdensome, especially for less experienced users.
 
-    Automatic updates, which can be disruptive, such as restarting your browser (e.g., Firefox) mid-workflow.
+   Automatic updates, which can be disruptive, such as restarting your browser (e.g., Firefox) mid-workflow.
 
 This program aims to provide a middle ground.
 What it does:
