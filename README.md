@@ -1,6 +1,6 @@
 # Linux Mint Update Helper Program
 
-_________ this is a early test version. Use at your own risk. Either install yourself or use the 
+_________ this is a early test version. Use at your own risk. Either install yourself or download and install the miupd_eng.deb
 
 This program is a lightweight update helper for **Linux Mint**. I created it because I wasn’t satisfied with the two options available for updating Linux Mint:
 
@@ -32,3 +32,4 @@ This program aims to provide a middle ground.
     - Show **update reminders** even when auto-update on shutdown is enabled
 
 This tool offers a flexible and user-friendly approach to updating your system without the inconvenience of full manual updates or disruptive automatic processes.
+<img width="472" height="394" alt="conrol panel" src="https://github.com/user-attachments/assets/5764b1c7-b8ce-4733-9dea-40a3cc0c04f7" />
