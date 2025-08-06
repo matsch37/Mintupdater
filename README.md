@@ -1,5 +1,7 @@
 # Linux Mint Update Helper Program
 
+_________ this is a early test version. Use at your own risk. Either install yourself or use the 
+
 This program is a lightweight update helper for **Linux Mint**. I created it because I wasn’t satisfied with the two options available for updating Linux Mint:
 
 - **Manual updates**, which can be burdensome, especially for less experienced users.
