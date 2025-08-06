@@ -19,6 +19,7 @@ Dieses Programm bietet einen Mittelweg.
 - Wenn der Benutzer auf **Herunterfahren** klickt, prüft das Programm erneut auf Updates und zeigt eine Auswahl mit den folgenden Optionen:
     - **Herunterfahren und aktualisieren**
     - **Herunterfahren ohne Aktualisierung**
+    - **Automatische Updates beim Herunterfahren ohne Nachfragen** einstellbar
 
 ## Funktionen:
 
@@ -28,6 +29,6 @@ Dieses Programm bietet einen Mittelweg.
     - **Autostart** des Programms aktivieren oder deaktivieren
     - Das Tool **starten/stoppen**
     - **Auto-Update beim Herunterfahren** aktivieren oder deaktivieren
-    - **Update-Erinnerungen anzeigen**, auch wenn Auto-Update beim Herunterfahren aktiviert ist
+    - **Update-Erinnerungen anzeigen**,an/aus auch wenn Auto-Update beim Herunterfahren aktiviert ist
 
 Dieses Tool bietet eine flexible und benutzerfreundliche Lösung für die Aktualisierung des Systems, ohne die Unannehmlichkeiten von vollständigen manuellen Updates oder störenden automatischen Prozessen.
