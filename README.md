@@ -1,5 +1,6 @@
 # Linux Mint Update Helper Programm
 
+____Achtung das ist eine Testversion. Benutzung auf eigene Gefahr. Selbst installieren oder die miupd_de.deb benutzen_____
 Dieses Programm ist ein leichtgewichtiges Update-Tool für **Linux Mint**. Ich habe es erstellt, weil ich mit den beiden verfügbaren Optionen zum Aktualisieren von Linux Mint nicht zufrieden war:
 
 - **Manuelle Updates**, die besonders für weniger erfahrene Nutzer eine Belastung darstellen können.
