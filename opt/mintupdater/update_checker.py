@@ -205,12 +205,13 @@ class UpdateChecker:
             flags=0,
             message_type=Gtk.MessageType.QUESTION,
             buttons=Gtk.ButtonsType.NONE,
-            text="Updates Available"
+            text="Aktualisierungen verfügbar"
         )
-        dialog.format_secondary_text("What would you like to do?")
-        dialog.add_button("Ask Again Later", Gtk.ResponseType.CANCEL)
-        dialog.add_button("Install Now", Gtk.ResponseType.OK)
-        dialog.add_button("Always install on Shutdown", Gtk.ResponseType.NO)
+        dialog.format_secondary_text("Was möchten Sie tun?")
+        dialog.add_button("Später fragen", Gtk.ResponseType.CANCEL)
+        dialog.add_button("Jetzt installieren", Gtk.ResponseType.OK)
+        dialog.add_button("Immer beim Herunterfahren installieren", Gtk.ResponseType.NO)
+
 
         def on_response(dlg, response):
             if response == Gtk.ResponseType.OK:
@@ -220,7 +221,7 @@ class UpdateChecker:
                     flags=Gtk.DialogFlags.MODAL,
                     message_type=Gtk.MessageType.INFO,
                     buttons=Gtk.ButtonsType.NONE,
-                    text="Please wait, Updates being installed..."
+                    text="Bitte warten, Updates werden installiert..."
                 )
                 wait_dialog.set_title("System Update")
                 wait_dialog.show_all()
@@ -251,7 +252,7 @@ def handle_prepare_for_shutdown(starting):
     """
     if not starting:
         return
-    
+
     config = load_config()
 
     def shutdown_flow():
@@ -262,7 +263,7 @@ def handle_prepare_for_shutdown(starting):
             flags=Gtk.DialogFlags.MODAL,
             message_type=Gtk.MessageType.INFO,
             buttons=Gtk.ButtonsType.NONE,
-            text="Please wait. Searching for Updates..."
+            text="Bitte warten, Suche nach Updates..."
         )
         wait_dialog.set_title("System Update")
         wait_dialog.show_all()
@@ -344,12 +345,12 @@ def show_shutdown_prompt():
        flags=0,
        message_type=Gtk.MessageType.QUESTION,
        buttons=Gtk.ButtonsType.NONE,
-       text="Updates Available at Shutdown"
+       text="Aktualisierungen beim Herunterfahren verfügbar"
     )
-    dialog.format_secondary_text("Do you want to install updates before shutdown?")
-    dialog.add_button("Update and Shutdown", Gtk.ResponseType.OK)
-    dialog.add_button("Shutdown without Updates", Gtk.ResponseType.NO)
-    dialog.add_button("Cancel", Gtk.ResponseType.CANCEL)
+    dialog.format_secondary_text("Möchten Sie Updates vor dem Herunterfahren installieren?")
+    dialog.add_button("Update und Herunterfahren", Gtk.ResponseType.OK)
+    dialog.add_button("Herunterfahren ohne Updates", Gtk.ResponseType.NO)
+    # dialog.add_button("Abbrechen", Gtk.ResponseType.CANCEL)
     response = dialog.run()
     dialog.destroy()
     return response, main_window
@@ -400,8 +401,7 @@ def ensure_inhibit_delay(min_required_seconds=36000):
             flags=0,
             message_type=Gtk.MessageType.WARNING,
             buttons=Gtk.ButtonsType.NONE,
-            text=f"Your system currently allows only a shutdown delay of {delay_seconds/60} minutes.\n"
-                 "Updates cannot be installed at shutdown."
+            text=f"Ihr System erlaubt derzeit nur eine Verzögerung des Herunterfahrens von {delay_seconds/60} Minuten.\nUpdates können deswegen nicht vor dem Herunterfahren installiert werden."
         )
         dialog.add_button("OK", Gtk.ResponseType.CANCEL)
         dialog.add_button("Increase Delay", Gtk.ResponseType.OK)
@@ -471,7 +471,7 @@ def ensure_inhibit_delay(min_required_seconds=36000):
             flags=0,
             message_type=Gtk.MessageType.INFO,
             buttons=Gtk.ButtonsType.OK,
-            text=f"Shutdown delay successfully increased to {min_required_seconds} seconds."
+            text=f"Herunterfahrensverzögerung erfolgreich auf {min_required_seconds/60} Minuten verlängert."
         )
         info.run()
         info.destroy()
@@ -519,8 +519,7 @@ def suf_inhibit_delay(min_required_seconds=36000):
             flags=0,
             message_type=Gtk.MessageType.WARNING,
             buttons=Gtk.ButtonsType.NONE,
-            text=f"Your system currently allows only a shutdown delay of {delay_seconds/60} minutes.\n"
-                 "Updates cannot be installed at shutdown.\n Please adjust in the Control Panel."
+            text=f"Ihr System erlaubt derzeit nur eine Verzögerung des Herunterfahrens von {delay_seconds/60} Minuten.\nUpdates können deswegen nicht vor dem Herunterfahren installiert werden."
         )
         dialog.add_button("OK", Gtk.ResponseType.OK)
         response = dialog.run()
@@ -533,7 +532,7 @@ def suf_inhibit_delay(min_required_seconds=36000):
             flags=0,
             message_type=Gtk.MessageType.ERROR,
             buttons=Gtk.ButtonsType.OK,
-            text="Error while increasing the delay."
+            text="Fehler beim Verlängern der Verzögerung."
         )
         err.format_secondary_text(str(e))
         err.run()
