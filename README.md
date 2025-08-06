@@ -32,3 +32,5 @@ Dieses Programm bietet einen Mittelweg.
     - **Update-Erinnerungen anzeigen**,an/aus auch wenn Auto-Update beim Herunterfahren aktiviert ist
 
 Dieses Tool bietet eine flexible und benutzerfreundliche Lösung für die Aktualisierung des Systems, ohne die Unannehmlichkeiten von vollständigen manuellen Updates oder störenden automatischen Prozessen.
+
+<img width="582" height="394" alt="Steuerpanel" src="https://github.com/user-attachments/assets/e8145fa8-3946-468d-839e-2a839ef8444f" />
